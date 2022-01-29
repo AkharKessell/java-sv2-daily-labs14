@@ -1,29 +1,26 @@
 package day02;
-
-import java.util.ArrayList;
 import java.util.List;
 
 public class Movie {
-    private final String name;
+    private final String title;
     private final int length;
-    private final List<String> cast;
+    private final List<String> actors;
 
-    public Movie(String name, int length, List<String> cast) {
-        this.name = name;
+    public Movie(String title, int length, List<String> actors) {
+        this.title = title;
         this.length = length;
-        this.cast = cast;
+        this.actors = actors;
     }
 
-
-    public String getName() {
-        return name;
+    public String getTitle() {
+        return title;
     }
 
     public int getLength() {
         return length;
     }
 
-    public List<String> getCast() {
-        return new ArrayList<>(cast);
+    public List<String> getActors() {
+        return actors;
     }
 }

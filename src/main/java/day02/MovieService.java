@@ -10,17 +10,16 @@ public class MovieService {
         movies.add(movie);
     }
 
-    public List<Movie> getMoviesFromActor(String actor) {
+    public List<Movie> getMoviesWithActor(String actor) {
         return movies.stream()
-                .filter(o -> o.getCast().contains(actor))
+                .filter(movie -> movie.getActors().contains(actor))
                 .toList();
     }
 
-
     public int getLongestLength() {
         return movies.stream()
-                .mapToInt(o -> o.getLength())
+                .mapToInt(Movie::getLength)
                 .max()
-                .orElseThrow(() -> new IllegalArgumentException("No movie in the list."));
+                .orElseThrow(() -> new IllegalArgumentException("empty list"));
     }
 }
