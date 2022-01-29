@@ -14,6 +14,7 @@ public class Movie {
         this.cast = cast;
     }
 
+
     public String getName() {
         return name;
     }
